@@ -8,10 +8,22 @@ ActiveRecord is the object-relational mapping (ORM) framework in Ruby on Rails t
 The use of validations in ActiveRecord is to ensure that the data stored in the database meets certain rules or conditions. Validations are defined in the model class using various validation methods available in ActiveRecord, which help to maintain the data's consistency and integrity by preventing the storage of invalid data in the database.
 
 ## 3. How does ActiveRecord manage database migrations?
-Ruby Domain specific languages (DSL)
 ActiveRecord is a tool in the Ruby on Rails framework that helps manage changes to a database's structure, such as creating or deleting tables and columns. It does this through a system of migration files which contain instructions for making these changes. To create a migration, you use a command to create a new migration file and then add the instructions for what changes should be made to the database. Finally, you run the migration command to apply the changes to the database. If you need to undo a migration, there's a command for that too.
 
 ## 4. What is a callback in ActiveRecord and what are the types of callbacks available?
+Callbacks in ActiveRecord are methods that get called at specific moments of an object's lifecycle. They allow developers to trigger certain behavior before or after specific events, such as validation, creation, update, or destruction of an ActiveRecord object. The types of callbacks available in ActiveRecord are:
+> 1. `before_validation` : triggered before validation occurs.
+> 2. `after_validation` : triggered after validation occurs.
+> 3. `before_save` : triggered before an object is saved, both on create and update.
+> 4. `after_save` : triggered after an object is saved, both on create and update.
+> 5. `before_create` : triggered before a new object is created.
+> 6. `after_create` : triggered after a new object is created.
+> 7. `before_update` : triggered before an existing object is updated.
+> 8. `after_update` : triggered after an existing object is updated.
+> 9. `before_destroy` : triggered before an object is destroyed.
+> 10. `after_destroy` : triggered after an object is destroyed.
+
+By using these callbacks, developers can perform additional actions such as logging, sending emails, updating associated records, etc.
 
 ## 5. Explain the difference between has_one and belongs_to associations in ActiveRecord.
 
