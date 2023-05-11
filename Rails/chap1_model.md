@@ -25,7 +25,17 @@ Callbacks in ActiveRecord are methods that get called at specific moments of an 
 
 By using these callbacks, developers can perform additional actions such as logging, sending emails, updating associated records, etc.
 
+## 5. What is the use of scope in ActiveRecord and how would you define a scope
+Scoping allows you to specify commonly-used queries
+```ruby
+class Book < ApplicationRecord
+  scope :out_of_print, -> { where(out_of_print: true) }
+end
+```
+
+
 ## 5. Explain the difference between has_one and belongs_to associations in ActiveRecord.
+
 
 ## 6. What is the difference between eager loading and lazy loading in ActiveRecord?
 
